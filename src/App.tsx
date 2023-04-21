@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import MenuDrawer from './components/MenuDrawer';
-import TopBar from './components/TopBar';
+import PersistentDrawerLeft from './components/PersistendDrawerLeft';
+import Background from './components/Background';
 
 function App() {
   return (
-    <div className="App">
-      <TopBar />
-    </div>
+    <>
+      <PersistentDrawerLeft />
+      <Background />
+    </>
   );
 }
 

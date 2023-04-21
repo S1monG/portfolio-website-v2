@@ -21,11 +21,12 @@ export default function MenuDrawer() {
   return (
     <Box
       sx={{
-        width: 1000,
+        width: "100%",
+        backgroundColor: "black",
       }}
       role="presentation"
     >
-      <List>
+      <List style={{ color: 'white' }}>
         <ListItemButton onClick={() => setBackdropState("About")}>
           <ListItemText primary={"About"} />
         </ListItemButton>
