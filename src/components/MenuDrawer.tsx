@@ -8,6 +8,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { Backdrop } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Colors from "../constants/Colors";
 
 type BackdropParamList = "None" | "About" | "Skills" | "Contact";
 
@@ -22,21 +23,22 @@ export default function MenuDrawer() {
     <Box
       sx={{
         width: "100%",
-        backgroundColor: "black",
+        backgroundColor: Colors.darkGrey,
       }}
       role="presentation"
     >
-      <List style={{ color: 'white' }}>
+      <List >
+      <Divider sx={{ borderBottomWidth: 3, background: "white", }}/>
         <ListItemButton onClick={() => setBackdropState("About")}>
-          <ListItemText primary={"About"} />
+          <ListItemText primary={"About"} style={{ color: 'white' }}/>
         </ListItemButton>
-        <Divider />
+        <Divider sx={{ borderBottomWidth: 3, background: "white", }}/>
         <ListItemButton onClick={() => setBackdropState("Skills")}>
-          <ListItemText primary={"Skills"} />
+          <ListItemText primary={"Skills"} style={{ color: 'white' }}/>
         </ListItemButton>
-        <Divider />
+        <Divider sx={{ borderBottomWidth: 3, background: "white", }}/>
         <ListItemButton onClick={() => setBackdropState("Contact")}>
-          <ListItemText primary={"Contact"} />
+          <ListItemText primary={"Contact"} style={{ color: 'white' }}/>
         </ListItemButton>
       </List>
 
@@ -45,6 +47,7 @@ export default function MenuDrawer() {
       >
         <ArrowBackIcon 
           sx={{position: "absolute", top: 10, left: 10, fontSize: 100}} 
+          style={{color: "white"}}
           onClick={() => setBackdropState("None") } 
         />
         {backdropState === "About" && <p>About</p>}
